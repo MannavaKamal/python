@@ -1,0 +1,27 @@
+{% extends 'index3.html' %}
+{% block 'body' %}
+{% load static %}
+<center><img src="{% static 'img-1.png'%}"  height="100"><br></center><br><center><h2>LOGIN</h2></center>
+
+     <form method="post" action="{%url 'checkadmilogin' %}">
+     {% csrf_token %}
+         <div class="container">
+                  <div class="design">
+                      <h4>
+
+
+  <lable style="margin-left:60px">Username :</lable>
+    <input  class="text"  type="text" name="uname" required/><br><br> </h4>
+                      <h4>
+
+
+  <lable style="margin-left:60px">Password :</lable>
+    <input class="text" type="password" name="pwd" required/><br><br>  </h4>
+    <input class="button-30" style="margin-left:100px" type="submit" value="LOGIN" />
+    <input class="button-30" style="margin-left:35px" type="reset" value="CLEAR" /><br><br><br>
+                        <center>Don't have account?<a href="http://127.0.0.1:8000/signup">Sign Up</a></center>
+ </form>
+</div>
+</div>
+
+{% endblock %}

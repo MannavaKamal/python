@@ -1,0 +1,210 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block 'body' %}
+
+  <script>
+                    function redirectToSignUpPage() {
+      window.location.href = 'adminOrUserChoice';
+    }
+    </script>
+<div>
+    <header class="hero">
+        <div class="overlay"></div>
+        <h1>Welcome to Our Luxurious Hotel</h1>
+        <p>Your Comfort, Our Priority</p><br><br><br><br>
+    </header>
+<div class="room-container">
+        <div class="room-card">
+            <img src="{%static 'room1.jpg'%}" alt="Deluxe Suite">
+            <center><h3>Deluxe Suite</h3>
+            <p>Spacious room with stunning views</p>
+            <button class="my-button" onclick="redirectToSignUpPage()">Book Now</button></center>
+        </div>
+
+        <div class="room-card">
+            <img src="{%static 'room2.jpg'%}" alt="Standard Room">
+            <center><h3>Standard Room</h3>
+            <p>Cozy room for a comfortable stay</p>
+            <button class="my-button" onclick="redirectToSignUpPage()">Book Now</button></center>
+        </div>
+    </div>
+</div>
+<style>
+    /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-image: url('https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?cs=srgb&dl=dug-out-pool-hotel-pool-1134176.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 200px 0;
+    color: #000000;
+    border: 75px solid #ffffff;
+}
+.text-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Horizontally center the text */
+    align-items: flex-start; /* Align items (text) to the top */
+    height: 100vh; /* Set the container height to the viewport height */
+}
+
+.text {
+    text-align: center; /* Center the text horizontally */
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+.room-card {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #add8e6;
+        }
+
+        .room-card img {
+            max-width: 100px; /* Adjust image width as needed */
+            height: auto;
+            margin-right: 20px; /* Add spacing between image and text */
+            border: 50px solid #b0c4de;
+        }
+
+        .room-card h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .room-card p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        /* Arrange cards in two columns */
+        .room-container {
+            display: flex;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+.room-card button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.room-card button:hover {
+    background-color: #ff9933;
+}
+
+/* About us section styles */
+.about-us {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: #555;
+}
+    /* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+.my-button {
+    width: 200px;
+    height: 50px;
+}
+/* Responsive styles (add media queries as needed) */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    /* Example: hide navigation links or change font sizes */
+}
+.room-card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #b0c4de;
+        }
+
+        .room-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .room-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .room-card p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Arrange cards in two columns */
+        .room-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+</style>
+
+{% endblock %}

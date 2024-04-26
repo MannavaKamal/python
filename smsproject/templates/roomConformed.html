@@ -1,0 +1,51 @@
+{% load static  %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>room booked successfully </h1>
+</head>
+<script>
+    function hrefFunction(){
+                window.location.href = 'user1';
+            }
+    </script >
+<body >
+<center>
+    <span class="border border-primary">
+<div class="text-bg-primary p-3">
+
+  <img src="{% static roomnoimg %}.png" class="rounded-4" alt="..."  height="400" widht="200">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">roomno: {{roomno}}</p>
+    <p class="card-text"><small class="text-body-secondary">roomType:{{roomtype}}</small></p>
+       <p class="card-text">RoomCost : 20Rs</p>
+  </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" type="button" onclick="hrefFunction()" >back to booking page</button>
+</div>
+</div>
+        </span>
+</center>
+
+</body>
+
+<style>
+
+
+div {
+  background: lightyellow;
+
+}
+    body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background-color: ;
+ }
+
+
+</style>
+</html>

@@ -1,0 +1,263 @@
+{% extends 'index3.html' %}
+{% load static  %}
+{% block 'body' %}
+{% csrf_token %}
+<head xmlns="http://www.w3.org/1999/html">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#message").hide();
+ });
+</script>
+<h1 id="message">welcome {{name}}</h1>
+<table >
+
+{% for x1,x2,x3,x4 in roomdetails %}
+ <script lang="javascript" type="text/javascript" >
+     function hrefFunction(){
+                window.location.href = 'uadminDetails';
+            }
+            function hrefFunction1(){
+                window.location.href = 'Admin3';
+            }
+     function SendFacialImage(c){
+     console.log(c)
+        var facialImage = {'data': c};
+         $.get("{% url 'adminDetailsId' %}",facialImage ,function(data,status){
+         console.log("iam there ")
+    });
+    }
+    function SendFacialImage1(c){
+     console.log(c)
+        var facialImage = {'data': c};
+         $.get("{% url 'deleteLiveRoom' %}",facialImage ,function(data,status){
+         console.log("kamal1")
+               hrefFunction1()
+    });
+    }
+
+    $(document).ready(function(){
+  $("#{{  forloop.counter }}").click(function(){
+  console.log("kamal34")
+    SendFacialImage({{x2}})
+    console.log("kamal35")
+    hrefFunction()
+
+  });
+  });
+    $(document).ready(function(){
+  $("#{{  forloop.counter }}3").click(function(){
+    SendFacialImage1(($("#{{ forloop.counter }}1").text()))
+  });
+     });
+
+    </script>
+<td class="td1">
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="p2" > Room no :</p> <p class="p3" align="center" id="{{ forloop.counter }}1" ><b>{{x3}} </b></p  >
+      <p class="p2" >Room Type : </p><p class="p3" align="center" id="{{ forloop.counter }}2"><b>{{x4}} </b></p>
+        <center><button class="button-1" id ={{ forloop.counter }} role="button"   >
+  <span class="button-1-shadow"></span>
+  <span class="button-1-edge"></span>
+  <span class="button-1-front text">
+    view Hotel details
+  </span></button></center>
+  </div>
+</div>
+</td>
+{% if forloop.counter|divisibleby:3 %}
+    <tr>
+        {% endif %}
+    {% endfor %}
+
+</table>
+</body>
+<body>
+<style>
+    body{
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.9VPjLhR7Zu3Filr4GgyOWwHaEK&pid=Api&P=0&h=180');
+    }
+.card1 {
+  /* Add shadows to create the "card" effect */
+height: 300px;
+  width: 200%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #EBEBEB;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.card2 {
+  /* Add shadows to create the "card" effect */
+height: 300px;
+  width: 200%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.card3{
+  /* Add shadows to create the "card" effect */
+height: 300px;
+  width:200%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.td1 {
+ /* border: 1px solid black;*/
+  padding: 100px;
+}
+.td2 {
+ /* border: 1px solid black;*/
+  padding: 200px;
+}
+.td3 {
+ /* border: 1px solid black;*/
+  padding: 50px;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 12px;
+}
+    @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  }
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.p2 {
+  font-family: "Copperplate", Fantasy;
+}
+
+.button-1 {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: #4ACC30;
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-1-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-1-front {
+  display: block;
+  position: relative;
+  padding: 2px 5px; ;
+  border-radius: 12px;
+  font-size: 0.5rem;
+  color: white;
+  background: #4ACC30;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-1-front {
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+}
+
+.button-1:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-1:hover .button-1-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-1:active .button-1-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-1:hover .button-1-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-1:active .button-1-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-1:focus:not(:focus-visible) {
+  outline: none;
+}
+</style>
+{% endblock %}

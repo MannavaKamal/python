@@ -1,0 +1,133 @@
+{% extends 'index.html' %}
+{% block 'body' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bus Reservation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- About Us Section -->
+    <section class="container mx-auto py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-40 items-center">
+            <!-- Left Column with Text -->
+            <div>
+                <h2 class="text-3xl font-bold mb-4 ex2">Customer Review</h2>
+                <h1 class="text-3xl font-bold mb-7 ex2" ><i>Here's what our recent travelers have to say about their experiences with Hotel Management</i></h1>
+                <br>
+
+                <p class="text-gray-700 leading-relaxed ex3">"I recently started using our Hotel Management System (HMS) for managing my property in Vijayawada.
+                    I was so impressed with how user-friendly the platform was! Managing room inventory, tracking reservations, and handling guest requests
+                    became a breeze. The entire process was smooth and secure, and I received instant updates for all operations. No more long phone calls
+                    or paperwork - this system is a game-changer! I highly recommend it to anyone looking for a convenient and stress-free way to manage
+                    their hotel operations."
+                </p>
+                <br>
+                <h2 class="ex2"><i>Life Saver for Last-Minute Room Bookings!</i></h2>
+                <br>
+                <p class="text-gray-700 leading-relaxed mt-4 ex3">"I had a sudden influx of guests due to a local event, and I needed to manage my room availability
+                    as soon as possible. Thankfully, I remembered our HMS! The platform showed me all the available rooms for the next day, including real-time
+                    updates. I was able to manage the bookings efficiently, all within minutes. The system even allowed me to handle special requests from guests,
+                    which was a huge plus. Thanks to our Hotel Management System, I didn’t miss out on maximizing my occupancy. This service is a lifesaver for
+                    anyone who needs to manage their hotel operations on short notice."</p>
+                <br>
+                <h2 class="ex2"><i>Simple and Secure Hotel Booking!</i></h2>
+            </div>
+            <!-- Right Column with Images and Creator Details -->
+            <div class="text-center">
+                <img src="{% static 'sudheer.jpg' %}" alt="Customer" class="rounded-full h-50 w-50 mx-auto mb-4">
+                <h3 class="text-xl font-bold ex2"><i>Customer</i></h3>
+                <p class="text-gray-700 ex1">Sudheer<br>Traveller</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Our Buses Section -->
+    <section class="container mx-auto py-12">
+        <div class="grid grid-cols-1 md :grid-cols-2 gap-8 items-center">
+            <!-- Left Column with Text -->
+            <div>
+                <h2 class="text-3xl font-bold mb-4 ex2">About</h2>
+                <br>
+
+                <h1 class="text-3xl font-bold mb-7 ex2"><i>Your Trusted Partner in Seamless Hotel Management.</i></h1>
+                <br>
+                <p class="text-gray-700 leading-relaxed ex1"><i>Manage Better, Serve Deeper: Your stress-free Hotel Management System
+</i></p>
+                <br>
+                <p class="text-gray-700 leading-relaxed mt-4 ex1">Welcome to our Hotel Management System, your ultimate platform
+                  for efficient and hassle-free hotel operations across the country! We pride ourselves on offering top-notch
+                  hotel management services tailored to meet the diverse needs of our valued customers. Whether you’re managing
+                  a boutique hotel, a family-run bed-and-breakfast, or a large hotel chain, our system has got you covered.</p>
+                <br>
+                <p class="text-gray-700 leading-relaxed mt-4 ex1">With years of experience in the hospitality industry, we have established our
+                  system as a trusted platform synonymous with reliability, efficiency, and affordability. Our user-friendly online system
+                  makes managing your hotel operations a breeze, allowing you to oversee reservations, room assignments, staff scheduling, and more.
+                </p>
+                <br>
+
+                <p class="text-gray-700 leading-relaxed mt-4 ex1">At our Hotel Management System, we prioritize customer satisfaction above all else.
+                  Our dedicated team of professionals works tirelessly to ensure that your hotel operations run smoothly and efficiently.
+                  From seamless booking processes to efficient room management and courteous customer support, we go the extra mile to exceed your
+                  expectations at every step of the way.</p>
+
+                <br>
+
+                <p class="text-gray-700 leading-relaxed mt-4 ex1">Moreover, we pride ourselves on our extensive features, ensuring efficient operations
+                  even in the most demanding situations. Whether you’re managing bustling city hotels or serene countryside retreats, our system will
+                  help you do so with ease and convenience.</p>
+
+                <br>
+
+                <p class="text-gray-700 leading-relaxed mt-4 ex1">Whether you’re operating for leisure or business, let our Hotel Management System be your
+                  partner in hospitality and service. Sit back, relax, and enjoy the peace of mind that comes with knowing your operations are in good hands.
+                  Thank you for choosing our Hotel Management System – where your journey to efficient hotel management begins with us!</p>
+
+                <br>
+
+            </div>
+            <!-- Right Column with Images of Buses -->
+            <div class="text-center">
+                <img src="{% static 'hotel.jpg' %}" alt="Bus" class="rounded-full shadow-md h-auto mx-auto mb-4">
+                <img src="{% static 'hotel1.jpg' %}" alt="Bus" class="rounded-full shadow-md h-auto mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-gray-200 py-12">
+        <div  class="container mx-auto text-center ">
+            <h2 class="text-3xl font-bold mb-4 ex2 ">Why Choose Us?</h2>
+            <p class="text-gray-700 leading-relaxed ex1">There are several reasons why people prefer our bus reservation
+                system:</p>
+            <ul class="text-gray-700 mt-4 list-disc list-inside">
+              <li>Competitive prices and discounts</li>
+              <li>24/7 customer support for assistance</li>
+              <li>Secure payment options for transactions</li>
+              <li>Easy-to-use platform for managing operations</li>
+              <li>Wide range of features for comprehensive hotel management</li>
+            </ul>
+        </div>
+    </section>
+</body>
+<style>
+p.ex1 {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.ex2{
+  margin-left: 30px;
+  margin-right: 30px;
+ }
+   p.ex3 {
+  margin-left: 60px;
+}
+</style>
+</html>
+{% endblock %}
+
+

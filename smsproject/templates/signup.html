@@ -1,0 +1,24 @@
+{% extends 'index3.html' %}
+{% block 'body' %}
+{% load static%}
+<center><img src="{% static 'img.jpg'%}"  height="100"><br></center><br><center><h2>SIGN UP</h2></center>
+<form method="post" action="{%url 'signupPageResponse' %}" >
+     {% csrf_token %}
+          <div class="container">
+                  <div class="design">
+                      <h4>
+
+
+  <lable style="margin-left:60px">Username :</lable>
+    <input  class="text"  type="text" name="uname" required/><br><br> </h4>
+                      <h4>
+
+
+  <lable style="margin-left:60px">Password :</lable>
+    <input class="text" type="password" name="pwd" required/><br><br>  </h4>
+    <input class="button-30" style="margin-left:100px" type="submit" value="Sign Up" />
+    <input class="button-30" style="margin-left:35px" type="reset" value="Clear" /><br><br><br>
+ </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <h1 id="message">{{message}}</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style-adminSignup.css' %}">
+    <title>UserSignUp</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#message").hide(9000);
+ });
+</script>
+
+<body>
+    <div class="container" id="container" style="margin-top:50px;">
+        <div class="form-container sign-up">
+            <form method="POST" action="{% url 'userSignup' %}">
+                 {% csrf_token %}
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&ifkv=ATuJsjxuB319aYxVbc2XVEkgR2f400ASUNxZdg5FBF5kgKn90aOxO516_qaXYcfAHYHAGH4Jl29H1A&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-234613770%3A1709875315491472&theme=mn" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="https://www.facebook.com/" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com/login" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <!-- <span>or use your email for registeration</span> -->
+                <input type="text" placeholder="Name" name="name" >
+                <input type="email" placeholder="Email" name="email">
+                <input type="password" placeholder="Password" name="password12">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form method="POST" action="{% url 'userLogin' %}">
+                {% csrf_token %}
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&ifkv=ATuJsjxuB319aYxVbc2XVEkgR2f400ASUNxZdg5FBF5kgKn90aOxO516_qaXYcfAHYHAGH4Jl29H1A&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-234613770%3A1709875315491472&theme=mn" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="https://www.facebook.com/" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com/login" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <!-- <span>or use your email password</span> -->
+                <input type="email" placeholder="Email" name="email1">
+                <input type="password" placeholder="Password" name="password1">
+                <a href="#">Forget Your Password?</a>
+
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="{% static 'script-adminSignup.js' %}"></script>
+
+</body>
+
+            <a href="/" class="btn">back to home page</a>
+
+
+</html>
+

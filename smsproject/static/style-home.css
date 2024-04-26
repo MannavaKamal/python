@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1rem;
+}
+
+header {
+    background-color: #c9d6ff;
+    color: #edf6f9;
+    text-align: center;
+    padding: 1rem 0;
+}
+ nav {
+            display: flex;
+            justify-content: center; /* Centers the navigation bar */
+            padding: 1rem 0;
+        }
+
+nav ul {
+    list-style: none;
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers items horizontally */
+    padding: 0;
+}
+
+nav ul li {
+
+    margin-right: 1rem;
+}
+
+nav ul li a {
+     color: #000000 !important;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #83c5be;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: url('bus.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Reduced height for better layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Added for readability */
+}
+
+.hero-content h2 {
+    font-size: 3rem; /* Slightly reduced for balance */
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2a9d8f;
+    color: #edf6f9;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+}
+
+.feature i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: #edf6f9;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Search bar styles */
+.search-bar {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px 0 0 5px;
+    width: 250px; /* Fixed width for better control */
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: #2a9d8f;
+    color: #edf6f9;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #2c7a7b;
+}
